@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>flask on Even - A super concise theme for Hugo</title>
-    <link>http://localhost:1313/tags/flask/</link>
+    <link>https://gandoufu.github.io/tags/flask/</link>
     <description>Recent content in flask on Even - A super concise theme for Hugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Oct 2020 12:43:14 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/flask/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Oct 2020 12:43:14 +0800</lastBuildDate><atom:link href="https://gandoufu.github.io/tags/flask/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Flask 项目目录结构</title>
-      <link>http://localhost:1313/post/flask%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</link>
+      <link>https://gandoufu.github.io/post/flask%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</link>
       <pubDate>Mon, 19 Oct 2020 12:43:14 +0800</pubDate>
       
-      <guid>http://localhost:1313/post/flask%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</guid>
+      <guid>https://gandoufu.github.io/post/flask%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</guid>
       <description>Flask 项目目录结构 翻译原文：https://lepture.com/en/2018/structure-of-a-flask-project Flask 非</description>
     </item>
     

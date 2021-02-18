@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="一、环境准备 1. 软件环境 软件 版本信息 操作系统 CentOS 7.6.1810 Docker 19.03.13 Kubernetes 1.19 etcd v3.14.13 flannel v0.13.0 2. 虚拟机信息 主机名 IP 需安装组件 master 172.16.207.128 kube-apiserver，kube-co" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="jiaqiang" /><meta name="description" content="一、环境准备 1. 软件环境 软件 版本信息 操作系统 CentOS 7.6.1810 Docker 19.03.13 Kubernetes 1.19 etcd v3.14.13 flannel v0.13.0 2. 虚拟机信息 主机名 IP 需安装组件 master 172.16.207.128 kube-apiserver，kube-co" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.80.0 with theme even" />
 
 
-<link rel="canonical" href="http://localhost:1313/post/deploy-k8s-cluster-binary-method/" />
+<link rel="canonical" href="https://gandoufu.github.io/post/deploy-k8s-cluster-binary-method/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -42,7 +42,7 @@
 <meta property="og:title" content="K8S 集群部署（二进制方式）" />
 <meta property="og:description" content="一、环境准备 1. 软件环境 软件 版本信息 操作系统 CentOS 7.6.1810 Docker 19.03.13 Kubernetes 1.19 etcd v3.14.13 flannel v0.13.0 2. 虚拟机信息 主机名 IP 需安装组件 master 172.16.207.128 kube-apiserver，kube-co" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://localhost:1313/post/deploy-k8s-cluster-binary-method/" />
+<meta property="og:url" content="https://gandoufu.github.io/post/deploy-k8s-cluster-binary-method/" />
 <meta property="article:published_time" content="2020-10-26T15:55:05+08:00" />
 <meta property="article:modified_time" content="2020-10-26T15:55:05+08:00" />
 <meta itemprop="name" content="K8S 集群部署（二进制方式）">
@@ -71,7 +71,7 @@
 <body>
   <div id="mobile-navbar" class="mobile-navbar">
   <div class="mobile-header-logo">
-    <a href="/" class="logo">Even</a>
+    <a href="/" class="logo">jap</a>
   </div>
   <div class="mobile-navbar-icon">
     <span></span>
@@ -82,13 +82,13 @@
 <nav id="mobile-menu" class="mobile-menu slideout-menu">
   <ul class="mobile-menu-list">
     <a href="/">
-        <li class="mobile-menu-item">Home</li>
+        <li class="mobile-menu-item">主页</li>
       </a><a href="/post/">
-        <li class="mobile-menu-item">Archives</li>
+        <li class="mobile-menu-item">文章</li>
       </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
+        <li class="mobile-menu-item">标签</li>
       </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
+        <li class="mobile-menu-item">分类</li>
       </a>
   </ul>
 
@@ -100,7 +100,7 @@
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
-  <a href="/" class="logo">Even</a>
+  <a href="/" class="logo">jap</a>
 </div>
 
 
@@ -110,13 +110,13 @@
 <nav class="site-navbar">
   <ul id="menu" class="menu">
     <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
+        <a class="menu-item-link" href="/">主页</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/post/">Archives</a>
+        <a class="menu-item-link" href="/post/">文章</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
+        <a class="menu-item-link" href="/tags/">标签</a>
       </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
+        <a class="menu-item-link" href="/categories/">分类</a>
       </li>
   </ul>
 </nav>
@@ -141,7 +141,7 @@
     </header>
 
     <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
+  <h2 class="post-toc-title">文章目录</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
@@ -2398,11 +2398,11 @@ cfssl gencert -ca<span class="o">=</span>ca.pem -ca-key<span class="o">=</span>c
 
     <div class="post-copyright">
   <p class="copyright-item">
-    <span class="item-title">Author</span>
-    <span class="item-content">olOwOlo</span>
+    <span class="item-title">文章作者</span>
+    <span class="item-content">jiaqiang</span>
   </p>
   <p class="copyright-item">
-    <span class="item-title">LastMod</span>
+    <span class="item-title">上次更新</span>
     <span class="item-content">
         2020-10-26
         
@@ -2420,11 +2420,11 @@ cfssl gencert -ca<span class="o">=</span>ca.pem -ca-key<span class="o">=</span>c
         <a class="prev" href="/post/deploy-k8s-cluster-kubeadm-method/">
             <i class="iconfont icon-left"></i>
             <span class="prev-text nav-default">K8S 集群部署（kubeadm）</span>
-            <span class="prev-text nav-mobile">Prev</span>
+            <span class="prev-text nav-mobile">上一篇</span>
           </a>
         <a class="next" href="/post/deploy-etcd-cluster/">
             <span class="next-text nav-default">CentOS7 搭建 Etcd 集群</span>
-            <span class="next-text nav-mobile">Next</span>
+            <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
       </nav>
@@ -2442,31 +2442,24 @@ cfssl gencert -ca<span class="o">=</span>ca.pem -ca-key<span class="o">=</span>c
 
     <footer id="footer" class="footer">
       <div class="social-links">
-      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
-      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
-      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
-      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="mailto:tangcugandoufu@163.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://github.com/gandoufu" class="iconfont icon-github" title="github"></a>
       <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
       <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
       <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
-      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
-      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
       <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
       <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
       <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
-  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  <a href="https://gandoufu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
 </div>
 
 <div class="copyright">
   <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
   </span>
   <span class="division">|</span>
   <span class="theme-info">
-    Theme - 
+    主题 - 
     <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
   </span>
 
@@ -2475,7 +2468,7 @@ cfssl gencert -ca<span class="o">=</span>ca.pem -ca-key<span class="o">=</span>c
   <span class="copyright-year">
     &copy; 
     2017 - 
-    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>olOwOlo</span>
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>jiaqiang</span>
   </span>
 </div>
 
