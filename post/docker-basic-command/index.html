@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Docker 基础命令 - Even - A super concise theme for Hugo</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="olOwOlo" /><meta name="description" content="镜像 docker search docker search -s 200 搜索 star 数多于 200 的镜像 docker pull docker images docker images -a docker images -qa 仅显示镜像 ID docker images centos 查看某一个具体的镜像 docker images &amp;ndash;digests docker images -a &amp;ndash;no-trunc docker rmi docker rmi -f 强制删除镜像 容器 docker run -it" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.80.0 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/docker-basic-command/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.2e81bbed97b8b282c1aeb57488cc71c8d8c8ec559f3931531bd396bf31e0d4dd.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Docker 基础命令" />
+<meta property="og:description" content="镜像 docker search docker search -s 200 搜索 star 数多于 200 的镜像 docker pull docker images docker images -a docker images -qa 仅显示镜像 ID docker images centos 查看某一个具体的镜像 docker images &ndash;digests docker images -a &ndash;no-trunc docker rmi docker rmi -f 强制删除镜像 容器 docker run -it" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/docker-basic-command/" />
+<meta property="article:published_time" content="2020-09-28T14:13:03+08:00" />
+<meta property="article:modified_time" content="2020-09-28T14:13:03+08:00" />
+<meta itemprop="name" content="Docker 基础命令">
+<meta itemprop="description" content="镜像 docker search docker search -s 200 搜索 star 数多于 200 的镜像 docker pull docker images docker images -a docker images -qa 仅显示镜像 ID docker images centos 查看某一个具体的镜像 docker images &ndash;digests docker images -a &ndash;no-trunc docker rmi docker rmi -f 强制删除镜像 容器 docker run -it">
+<meta itemprop="datePublished" content="2020-09-28T14:13:03+08:00" />
+<meta itemprop="dateModified" content="2020-09-28T14:13:03+08:00" />
+<meta itemprop="wordCount" content="543">
+
+
+
+<meta itemprop="keywords" content="docker," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Docker 基础命令"/>
+<meta name="twitter:description" content="镜像 docker search docker search -s 200 搜索 star 数多于 200 的镜像 docker pull docker images docker images -a docker images -qa 仅显示镜像 ID docker images centos 查看某一个具体的镜像 docker images &ndash;digests docker images -a &ndash;no-trunc docker rmi docker rmi -f 强制删除镜像 容器 docker run -it"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Even</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Even</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Docker 基础命令</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-09-28 </span>
+        <div class="post-category">
+            <a href="/categories/docker/"> Docker </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h4 id="镜像">镜像</h4>
+<ul>
+<li>docker search</li>
+<li>docker search -s 200
+<ul>
+<li>搜索 star 数多于 200 的镜像</li>
+</ul>
+</li>
+<li>docker pull</li>
+<li>docker images</li>
+<li>docker images -a</li>
+<li>docker images -qa
+<ul>
+<li>仅显示镜像 ID</li>
+</ul>
+</li>
+<li>docker images centos
+<ul>
+<li>查看某一个具体的镜像</li>
+</ul>
+</li>
+<li>docker images &ndash;digests</li>
+<li>docker images -a &ndash;no-trunc</li>
+<li>docker rmi</li>
+<li>docker rmi -f
+<ul>
+<li>强制删除镜像</li>
+</ul>
+</li>
+</ul>
+<h4 id="容器">容器</h4>
+<ul>
+<li>
+<p>docker run -it</p>
+</li>
+<li>
+<p>docker run -d</p>
+<ul>
+<li>daemon 形式启动，容器中要有进程运行，否则容器启动后会立即退出</li>
+</ul>
+</li>
+<li>
+<p>docker ps</p>
+<ul>
+<li>查看运行状态的容器</li>
+</ul>
+</li>
+<li>
+<p>docker ps -a</p>
+<ul>
+<li>查看所有容器（包含停止状态的）</li>
+</ul>
+</li>
+<li>
+<p>docker ps -aq</p>
+</li>
+<li>
+<p>docker ps -l</p>
+<ul>
+<li>上一个运行的容器</li>
+</ul>
+</li>
+<li>
+<p>docker ps -n 3</p>
+<ul>
+<li>上 3 次运行的容器</li>
+</ul>
+</li>
+<li>
+<p>docker pause</p>
+</li>
+<li>
+<p>docker unpause</p>
+</li>
+<li>
+<p>docker start</p>
+</li>
+<li>
+<p>docker restart</p>
+</li>
+<li>
+<p>docker stop</p>
+</li>
+<li>
+<p>docker kill</p>
+<ul>
+<li>强制停止容器</li>
+</ul>
+</li>
+<li>
+<p>docker rm</p>
+</li>
+<li>
+<p>docker rm -f</p>
+</li>
+<li>
+<p>docker rm -f $(docker ps -qa)</p>
+</li>
+<li>
+<p>docker ps -aq | xargs docker rm</p>
+</li>
+<li>
+<p>docker top</p>
+<ul>
+<li>查看容器中的进程信息</li>
+</ul>
+</li>
+<li>
+<p>docker stats</p>
+<ul>
+<li>docker 容器资源使用统计</li>
+</ul>
+</li>
+<li>
+<p>docker diff</p>
+<ul>
+<li>检查一个容器文件系统更改情况</li>
+</ul>
+</li>
+</ul>
+<h4 id="退出容器">退出容器</h4>
+<p>当处于容器中时，有 2 种方式退出容器：</p>
+<ol>
+<li>
+<p>exit</p>
+<p>退出，并停止容器</p>
+</li>
+<li>
+<p>ctrl + q + p</p>
+<p>退出，但不停止容器</p>
+</li>
+</ol>
+<h4 id="进入容器">进入容器</h4>
+<ul>
+<li>docker attach</li>
+<li>docker exec -it container_id /bin/sh</li>
+</ul>
+<h4 id="拷贝文件">拷贝文件</h4>
+<ul>
+<li>docker cp container_id:/path/of/file /path/to/target</li>
+</ul>
+<h4 id="查看日志">查看日志</h4>
+<ul>
+<li>docker logs container_id</li>
+<li>docker logs -f container_id
+<ul>
+<li>实时跟踪日志，类似 tail -f</li>
+</ul>
+</li>
+<li>docker logs &ndash;tail 10 container_id
+<ul>
+<li>查看最后 10 行日志</li>
+</ul>
+</li>
+<li>docker logs -f -t &ndash;since=&ldquo;2020-09-10&rdquo; &ndash;tail=100 cotainer_id
+<ul>
+<li>查看指定日期之后的日志，只显示最后 100 条</li>
+</ul>
+</li>
+<li>docker logs &ndash;since=&ldquo;2020-09-10T09:30:25&rdquo; &ndash;until &ldquo;2020-09-10T10:30:00&rdquo; container_id
+<ul>
+<li>查看指定时间段的日志</li>
+</ul>
+</li>
+</ul>
+<h4 id="docker-commit">docker commit</h4>
+<p>以某个镜像启动容器后，在容器内做一些个性化的修改，然后可以通过 docker commit 命令生成新的镜像。</p>
+<ul>
+<li>docker commit -m &ldquo;注释信息&rdquo; -a &ldquo;作者&rdquo; container_id 要创建的目标镜像名:[标签名]</li>
+</ul>
+<h4 id="容器数据卷">容器数据卷</h4>
+<p>启动容器时，可以使用<code>-v</code>选项关联宿主机的 volume，实现宿主机和容器内文件内共享。</p>
+<ul>
+<li>docker run -d -it -v 宿主机文件夹路径:容器内文件夹路径 镜像ID</li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">olOwOlo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-09-28
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/docker/">docker</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/unittest-basic-knowledge/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Python Unittest 单元测试框架基础</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2017 - 
+    2021<span class="heart"><i class="iconfont icon-heart"></i></span><span>olOwOlo</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c12618f9a600c40bd024996677e951e64d3487006775aeb22e200c990006c5c7.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

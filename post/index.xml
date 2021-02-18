@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Even - A super concise theme for Hugo</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on Even - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 02 Nov 2020 14:24:12 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>K8S 集群部署（kubeadm）</title>
+      <link>http://localhost:1313/post/deploy-k8s-cluster-kubeadm-method/</link>
+      <pubDate>Mon, 02 Nov 2020 14:24:12 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/deploy-k8s-cluster-kubeadm-method/</guid>
+      <description>一、虚拟机信息 主机名 IP 操作系统 master 172.16.207.128 CentOS 7.6.1810 node1 172.16.207.129 CentOS 7.6.1810 node2 172.16.207.130 CentOS 7.6.1810 二、 系统配置 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 # 1) 关闭防火墙 systemctl stop firewalld systemctl</description>
+    </item>
+    
+    <item>
+      <title>K8S 集群部署（二进制方式）</title>
+      <link>http://localhost:1313/post/deploy-k8s-cluster-binary-method/</link>
+      <pubDate>Mon, 26 Oct 2020 15:55:05 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/deploy-k8s-cluster-binary-method/</guid>
+      <description>一、环境准备 1. 软件环境 软件 版本信息 操作系统 CentOS 7.6.1810 Docker 19.03.13 Kubernetes 1.19 etcd v3.14.13 flannel v0.13.0 2. 虚拟机信息 主机名 IP 需安装组件 master 172.16.207.128 kube-apiserver，kube-co</description>
+    </item>
+    
+    <item>
+      <title>CentOS7 搭建 Etcd 集群</title>
+      <link>http://localhost:1313/post/deploy-etcd-cluster/</link>
+      <pubDate>Wed, 21 Oct 2020 16:47:21 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/deploy-etcd-cluster/</guid>
+      <description>搭建步骤 本次实验搭建包含3个节点的etcd集群，主机规划： 节点IP 主机名称 192.168.209.130 master-01 192.168.209.131 master-02 192.168.209.132 master-03 cfssl工具为etcd自签证书 部署etcd集群（v3</description>
+    </item>
+    
+    <item>
+      <title>Flask 项目目录结构</title>
+      <link>http://localhost:1313/post/flask%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</link>
+      <pubDate>Mon, 19 Oct 2020 12:43:14 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/flask%E9%A1%B9%E7%9B%AE%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84/</guid>
+      <description>Flask 项目目录结构 翻译原文：https://lepture.com/en/2018/structure-of-a-flask-project Flask 非</description>
+    </item>
+    
+    <item>
+      <title>Python Unittest 单元测试框架基础</title>
+      <link>http://localhost:1313/post/unittest-basic-knowledge/</link>
+      <pubDate>Thu, 15 Oct 2020 16:34:38 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/unittest-basic-knowledge/</guid>
+      <description>基本实例 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 import unittest class TestStringMethods(unittest.TestCase): def test_upper(self): self.assertEqual(&amp;#39;foo&amp;#39;.upper(), &amp;#39;FOO&amp;#39;) def test_isupper(self): self.assertTrue(&amp;#39;FOO&amp;#39;.isupper()) self.assertFalse(&amp;#39;Foo&amp;#39;.isupper()) def test_split(self): s = &amp;#39;hello world&amp;#39; self.assertEqual(s.split(), [&amp;#39;hello&amp;#39;, &amp;#39;world&amp;#39;]) with self.assertRaises(TypeError): s.split(2) if __name__ == &amp;#39;__main__&amp;#39;: unittest.main() 运行： 1 2 3 4 5 6 7 8 9 10 11 12</description>
+    </item>
+    
+    <item>
+      <title>Docker 基础命令</title>
+      <link>http://localhost:1313/post/docker-basic-command/</link>
+      <pubDate>Mon, 28 Sep 2020 14:13:03 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/docker-basic-command/</guid>
+      <description>镜像 docker search docker search -s 200 搜索 star 数多于 200 的镜像 docker pull docker images docker images -a docker images -qa 仅显示镜像 ID docker images centos 查看某一个具体的镜像 docker images &amp;ndash;digests docker images -a &amp;ndash;no-trunc docker rmi docker rmi -f 强制删除镜像 容器 docker run -it</description>
+    </item>
+    
+  </channel>
+</rss>
